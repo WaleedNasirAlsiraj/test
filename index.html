@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alsiraj App || By Waleed Nasir</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="popup" class="splash hide">
+        <div class="text">
+            <h2 class="splash_heading">Alsiraj App</h2>
+            <h3 class="splash_caption">Learn Quran and Recite once everyday</h3>
+        </div>
+        <div class="splash_img">
+            <img style="box-shadow: rgb(104, 44, 188, 0.8) 0px 7px 29px 0px ; border-radius: 27px;
+            " src="/icons/Frame 43.svg">
+            <button style="box-shadow: rgb(104, 44, 188, 0.8) 0px 7px 29px 0px ; " onclick="splashExit()">Get Started</button>
+        </div>
+    </div>
+    <div id="home" class="home hide fade">
+        <div class="nav_bar">
+            <div id="side_bar" class="side_bar hide">
+                <details>
+                    <summary>Settings</summary>
+                    <p style="font-size: 20px;font-weight:600;">Select imam</p>
+                    <select style="font-size: 20px;" onchange="change_imam()" name="imam" id="imam">
+                        
+                    </select>
+                    <br>
+                    <p style="font-size: 20px;font-weight:600;">Change Your name</p>
+                    <input id="input_name" placeholder = "Enter New Name" onchange="change_name()" style="height: 30px;padding: 0px 10px;font-weight: 600;font-size: 20px;" type="text">
+                    <br>
+                    <button id="clear_btn" onclick="clear_storage()">Clear Data</button>
+                </details>
+                <a style="text-decoration: none; color:white;" href="https://codingbywaleedtesting.netlify.app/">About Me</a> 
+                <div class="close">
+                    <button onclick="menu_exit()">&times;</button>
+                </div>
+            </div>
+            <div class="nav_bar_left">
+               <button onclick="show_sidebar()"><img width="24px" height="24px" src="/icons/menu-2-line 1.svg"></button> 
+                <h2 class="nav_bar_heading">Alsiraj App</h2>
+            </div>
+            <button onclick="search()"><img width="24px" height="24px" src="/icons/Group.svg" alt=""></button>
+        </div>
+        <div id="input_element" class="input hide">
+            <input id="input" onkeyup="filter()" type="text" placeholder="Enter Surah Name">
+        </div>
+        <div class="welcome_msg">
+            <h3>Asslamualaikum</h3>
+            <h2 id="name">Your Name</h2>
+        </div>
+        <div class="banner">
+            <img style="box-shadow: rgb(104, 44, 188, 0.6) 0px 7px 29px 0px; align-items: center; width: 85%;
+            border-radius: 25px;
+            " src="/icons/Frame 30.svg">
+            <div class="last_read">
+                <div class="top">
+                    <img src="/icons/cib-readme 1.svg">
+                    <h4>Last Read</h4>
+                </div>
+                <div class="bottom">
+                    <h3 id="last_surah">Al-Faatiha</h3>
+                    <h4>Ayah No: <span id="last_ayat"></span></h4>
+                </div>
+            </div>
+        </div>
+        <div class="surahs_list">
+            <div id="list" class="list">
+                <!-- API -->
+            </div>
+            
+        </div>
+        <div class="main_menu">
+            <div class="main_menu_left">
+                <button><img  src="/icons/049-prayer 1.svg"></button>
+            </div>
+            <div class="main_menu_center">
+                <button onclick="back()"><img src="/icons/005-quran 1.svg"></button>
+            </div>
+            <div class="main_menu_right">
+                <button onclick="namaz()"><img src="/icons/Icon(2).svg"></button>
+            </div>
+        </div>
+    </div>
+    <div id="player" class="player hide">
+        <div id="top" class="nav_bar">
+            <div class="nav_bar_left">
+                <button onclick="back()"><img width="24px" height="24px" src="/icons/menu-2-line 1(1).svg" alt=""></button>
+                <h2 class="nav_bar_heading">Alsiraj App</h2>
+            </div>
+        </div>
+        <div>
+        <div id="banner" class="player_banner">
+            <img style="
+            box-shadow: rgb(104, 44, 188, 0.4) 0px 7px 29px 0px;
+            border-radius: 25px;" src="/icons/Frame 33.svg">
+            
+        </div>
+        <div>
+        <div id="ayat_list" class="verses scroll">
+            <div class="full_surah">
+                <div class="verse_list_top full">
+                    <h3>Full Surah</h3>
+                    <div class="verse_right">
+                        <audio id="playfull" src=""></audio>
+        <button id="full" class="btn" onclick='autoplay(this)'><img id="full"  class="full_surah play_btn" width="25px" src="/icons/Frame.svg"></button>
+                        <!-- <img src="/icons/Frame.svg"> -->
+                        <button id="full_surah" onclick="copy(this)"><img src="/icons/Frame(1).svg">
+                        </div></button>
+                </div>
+                <br>
+            </div>
+            <!-- <div class="verse_list">
+                <div class="verse_list_top">
+                    <h3>1</h3>
+                    <div class="verse_right">
+                        <img src="/icons/Group.png">
+                        <img src="/icons/Frame(1).png">
+                    </div>
+                </div>
+                <div class="verse_list_bottom">
+                    <p class="ar">ﻦﻳِمَلٰعْلا ِّبَر ِهَّلِل ُدْمَحْلا</p>
+                    <p class="en">[All] praise is [due] to Allah, Lord of the worlds -</p>
+                </div>
+            </div> -->
+
+            <!-- API -->
+
+        
+        </div>
+        <div class="main_menu">
+            <div class="main_menu_left">
+                <button><img  src="/icons/049-prayer 1.svg"></button>
+            </div>
+            <div class="main_menu_center">
+                <button onclick="back()"><img src="/icons/005-quran 1.svg"></button>
+            </div>
+            <div class="main_menu_right">
+                <button onclick="namaz()"><img src="/icons/Icon(2).svg"></button>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+<div class="namaz hide" id="namaz">
+    <div id="top" class="nav_bar">
+        <div class="nav_bar_left">
+            <button onclick="back()"><img width="24px" height="24px" src="/icons/menu-2-line 1(1).svg" alt=""></button>
+            <h2 class="nav_bar_heading">Alsiraj App</h2>
+        </div>
+    </div>
+
+    <div id="namaz_list" class="namaz_list">
+        <!-- API -->
+        <!-- <div class="items">
+            <h2 class="namaz_name">Fajr</h2>
+            <h2 class="namaz_time">04:54</h2>
+        </div> -->
+    </div>
+
+
+    <div class="main_menu">
+        <div class="main_menu_left">
+            <button><img  src="/icons/049-prayer 1.svg"></button>
+        </div>
+        <div class="main_menu_center">
+            <button onclick="back()"><img src="/icons/005-quran 1.svg"></button>
+        </div>
+        <div class="main_menu_right">
+            <button onclick="namaz()"><img src="/icons/Icon(2).svg"></button>
+        </div>
+    </div>
+</div>
+    <script src="/app.js"></script>
+    <script src="/namaz.js"></script>
+</body>
+</html>
+

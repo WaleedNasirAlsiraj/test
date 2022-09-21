@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+button{
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    
+}
+
+.splash{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: 0.5s all;
+    opacity: 100%;
+}
+
+
+body{
+    width: 374px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.text{
+    width: 195px;
+    height: 112px;
+    margin: 86px 90px 49px 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    
+}
+
+.splash_heading{
+    color: #672CBC;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.nav_bar_heading{
+    color: #672CBC;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 24px;
+}
+
+.splash_caption{
+    color: #8789A3;
+    font-size: 18px;
+    width: 205px;
+    font-weight: 400;
+}
+
+.splash_img{
+    margin: 30px;
+}
+
+.splash_img button{
+    all: unset;
+    color: white;
+    background-color: #F9B091;
+    padding: 17px 41px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    transform: translateY(-35px);
+    margin: 0px 64px;
+    cursor: pointer;
+    
+}
+
+.hide{
+    display: none;
+}
+
+.fade{
+    opacity: 0%;
+    transition: 0.5s all;
+}
+
+.nav_bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 24px;
+    justify-content: space-between;
+}
+
+.nav_bar_left{
+    display: flex;
+    align-items: center;
+}
+
+
+.welcome_msg{
+    margin: 0px 0px 0px 24px;
+}
+
+.welcome_msg h3{
+    margin-bottom: 4px;
+    font-size: 20px;
+    color: #8789A3;
+    font-weight: 400;
+}
+
+.welcome_msg h2{
+    margin-bottom: 4px;
+    font-size: 24px;
+    color: #240F4F;
+    font-weight: 600;
+}
+
+.banner{
+    height: calc(131px + 25px + 25px);
+    
+}
+
+.banner img{
+    margin: 24px 24px 24px 24px;
+    align-items: center;
+}
+
+.last_read{
+    margin-left: 44px;
+    transform: translateY(-145px);
+    color: white;
+}
+
+.top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.top img{
+    /* box-shadow: rgb(104, 44, 188, 0.8) 0px 7px 29px 0px; */
+    margin: 0px 10px 0px 0px;
+    transform: translateY(2px);
+    
+
+}
+
+.top h4{
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+}
+
+.surahs_list{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 24px;
+    margin-bottom: 0px;
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    height: 42vh;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+.surahs_list::-webkit-scrollbar,.scroll::-webkit-scrollbar{
+    display: none;
+}
+
+.list a{
+    all: unset;
+    width: 93%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.3s all;
+    padding: 10px;
+}
+
+.list a:hover{
+    background-color: rgb(235, 235, 235);
+    transition: 0.3s all;
+    border-radius: 10px;
+    z-index: 99;
+    /* box-shadow: rgb(104, 44, 188, 0.4) 0px 7px 29px 0px; */
+}
+
+.list_left{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+.list_right h3{
+    font-family: 'Amiri', serif;
+    font-size: 20px;
+    font-weight: 900;
+    color: #240F4F;
+}
+
+.surah_name_detail{
+    font-size: 12px;
+    color: #8789A3;
+    font-weight: 600;
+}
+
+.surah_name_heading{
+    font-size: 16px;
+    font-weight: 600;
+    color: #240F4F;
+}
+
+.number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-right: 10px;
+}
+
+.number h3{
+    font-weight: 600;
+    font-size: 13px;
+    position: absolute;
+    color: #240F4F;
+}
+
+.player{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: 0.5s all;
+    opacity: 100%;
+}
+
+.player_banner img{
+    margin: 0px 24px;
+}
+
+.player_banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.player_banner_text{
+        color: white;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+}
+
+.player_banner_text h1{
+    font-weight: 500;
+    font-size: 26px;
+}
+
+.player_banner_text p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.player_banner_text img{
+    margin-top: 20px;
+}
+
+.line{
+    margin: 15px 0px;
+    width: 100%;
+    opacity: 50%;
+    background-color: white;
+    height: 2px;
+}
+
+.verses{
+    padding: 36px 24px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.verse_list{
+    display: flex;
+    flex-direction: column;
+}
+
+.verse_list_top{
+    padding: 10px 20px;
+    padding-left: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 100px;
+    background-color: rgb(235, 235, 235);
+    box-shadow: rgb(104, 44, 188, 0.2) 0px 7px 29px 0px;
+}
+
+
+.show{
+    display: block;
+    opacity: 100%;
+    visibility: visible;
+    transition: 1s all;
+}
+
+.verse_list_top h3{
+    border-radius: 10px;
+    color: #672CBC;
+}
+
+.verse_right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 60px;
+    
+}
+
+.verse_list_bottom{
+    padding: 20px 20px;
+}
+
+.ar{
+    font-size: 25px;
+    font-family: 'Amiri', serif;
+    font-weight: 900;
+    text-align: right;
+}
+
+.btn{
+    all: unset;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.en{
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.play_btn{
+    cursor: pointer;
+}
+
+
+.main_menu{
+    position: sticky;
+    bottom: 0%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+    
+}
+
+.main_menu_left button,.main_menu_right button{
+    all: unset;
+    cursor: pointer;
+}
+
+.main_menu_left img{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 5px;
+    width: 40px;
+}
+
+.main_menu_right img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 5px;
+    width: 44px;
+}
+
+.main_menu_center button{
+    all: unset;
+    cursor: pointer;
+    transform: translateY(-20px);
+    box-shadow: rgb(104, 44, 188, 0.8) 0px 7px 29px 0px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+
+}
+
+.main_menu_center img{
+    background-color: #672CBC;
+    padding: 12px;
+    border-radius: 100px;
+    width: 75px;
+    box-shadow: rgba(104, 44, 188, 0.2) 0px 7px 29px 0px;
+}
+
+
+
+#side_bar{
+    z-index: 999;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%);
+    text-align: center;
+    background-color: #1d1d1d;
+    width: 100%;
+    height: 100%;
+}
+
+.close{
+    font-size: 40px;
+    position: absolute;
+    left: 80%;
+    bottom: 70%;
+}
+
+.hide{
+    opacity: 0%;
+    z-index: 0;
+    display: none;
+    visibility: hidden;
+}
+
+.input{
+
+    padding: 0px 24px 10px 24px;
+}
+
+.input input{
+    width: 100%;
+    text-align: left;
+    height: 30px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+input:focus{
+    outline: none;
+    border: none;
+    border: 2px solid#672CBC;
+}
+
+#top{
+    position: sticky;
+    top: 0%;
+    background-color: white;
+    z-index: 99;
+    margin: 0;
+    padding: 25px 24px;
+}
+
+.full{
+    background-color: #863ED5;
+}
+
+.full h3{
+    color: white;
+}
+
+#imam{
+    font-weight: 600;
+    width: 50%;
+}
+
+#input_name{
+    font-weight: 600;
+    width: 50%;
+    text-align: center;
+}
+#clear_btn{
+    font-size: 20px;
+    font-weight: 600;
+    border: 2px solid rgb(192, 192, 192);
+    background-color: white;
+    padding: 5px;
+    color:black;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+}
+
+
+.items{
+    background-color: rgb(135, 137, 163, 0.15);
+    border-radius: 10px;
+    display: flex;
+    color: #672CBC;
+    font-size: 12px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 24px;
+    margin: 10px 24px;
+    transition: 0.2s all;
+}
+
+.items:hover{
+    background-color: #672CBC;
+    color: white;
+    transition: 0.2s all;
+    transform: scale(105%);
+}
+
+.span{
+    margin-right: 5px;
+}
+
+.namaz_list{
+    height: 80vh;
+    display: flex;
+    flex-direction: column ;
+}
