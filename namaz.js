@@ -9,7 +9,7 @@ let current_time_min = d.getMinutes()
 
 function namaz() {
   if (localStorage.getItem("logi")) {
-    fetch(`http://api.aladhan.com/v1/calendar?latitude=${localStorage.getItem('lati')}&longitude=${localStorage.getItem('logi')}&method=2x&month=${month + 1 }&year=${year}`)
+    fetch(`https://api.aladhan.com/v1/calendar?latitude=${localStorage.getItem('lati')}&longitude=${localStorage.getItem('logi')}&method=2x&month=${month + 1 }&year=${year}`)
     .then(response => response.json())
     .then((data) => {
             let fajr = data.data[date].timings.Fajr
